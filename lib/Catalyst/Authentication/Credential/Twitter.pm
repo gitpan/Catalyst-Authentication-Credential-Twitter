@@ -3,7 +3,7 @@ BEGIN {
   $Catalyst::Authentication::Credential::Twitter::AUTHORITY = 'cpan:JESSESTAY';
 }
 {
-  $Catalyst::Authentication::Credential::Twitter::VERSION = '0.03001';
+  $Catalyst::Authentication::Credential::Twitter::VERSION = '1.0.0';
 }
 # ABSTRACT:  Twitter authentication for Catalyst
 
@@ -14,7 +14,7 @@ use Data::Dumper;
 
 BEGIN {
     __PACKAGE__->mk_accessors(qw/
-        _twitter twitter_user callback_url consumer_key consumer_secret
+        _twitter callback_url consumer_key consumer_secret
     /);
 }
 
@@ -22,6 +22,14 @@ use Catalyst::Exception ();
 use Net::Twitter;
 
 my $check_for_user_session;
+
+sub twitter_user {
+    my( $self, $c, $value ) = @_;
+
+    $c->user_session->{twitter_user} = $value if $value;
+
+    return $c->user_session->{twitter_user};
+}
 
 sub new {
     my ($class, $config, $c, $realm) = @_;
@@ -99,7 +107,7 @@ sub authenticate_twitter {
 	$twitter_user_hash->{'access_token'} = $access_token;
 	$twitter_user_hash->{'access_token_secret'} = $access_token_secret;
 
-    $self->twitter_user( $twitter_user_hash );
+    $self->twitter_user( $c, $twitter_user_hash );
 
     return $twitter_user_hash;
 }
@@ -108,10 +116,11 @@ sub authenticate {
     my ( $self, $c, $realm, $authinfo ) = @_;
 
 	unless ($authinfo) {
-        $self->authenticate_twitter( $c ) unless $self->twitter_user;
+        $self->authenticate_twitter( $c ) unless $self->twitter_user($c);
 
 		$authinfo = {
-			'twitter_user_id'	=> $self->twitter_user->{'id'},
+			'twitter_user_id'	=> $self->twitter_user($c)->{id},
+            id                  => $self->twitter_user($c)->{id},
 		};
 	}
 
@@ -123,7 +132,7 @@ sub authenticate {
 		if (   $user_obj->result_source->has_column('twitter_user') 
             && $user_obj->result_source->has_column('twitter_access_token') 
             && $user_obj->result_source->has_column('twitter_access_token_secret')) {
-            my $twitter_user = $self->twitter_user;
+            my $twitter_user = $self->twitter_user($c);
 			$user_obj->update({
 				'twitter_user'					=> $twitter_user->{'screen_name'},
 				'twitter_access_token'			=> $twitter_user->{access_token},
@@ -157,9 +166,8 @@ sub authenticate_twitter_url {
 
 1;
 
-
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -168,7 +176,7 @@ Catalyst::Authentication::Credential::Twitter - Twitter authentication for Catal
 
 =head1 VERSION
 
-version 0.03001
+version 1.0.0
 
 =head1 SYNOPSIS
 
@@ -286,7 +294,7 @@ Only performs the twitter authentication. Returns a hashref containing
 the user's information given by Twitter (see C<authenticate()> above for
 the lists of keys returned).
 
-=head2 twitter_user()
+=head2 twitter_user($c)
 
 Contains the user's twitter information after a successful twitter
 authentication via C<authenticate_twitter()> or
@@ -301,8 +309,8 @@ on-the-fly:
 
         # properly authenticated against twitter,
         # user just doesn't exist yet
-        if ( !$user and  $twitter->twitter_user ) {
-            $user = $self->model->create_user( $twitter->twitter_user );
+        if ( !$user and  $twitter->twitter_user($c) ) {
+            $user = $self->model->create_user( $twitter->twitter_user($c) );
         }
 
         # etc
@@ -345,4 +353,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -7,14 +7,13 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
-    "Carp" => 0,
     "Catalyst" => 0,
     "Catalyst::Controller" => 0,
+    "File::Find" => 0,
+    "File::Temp" => 0,
     "Module::Build" => "0.3601",
-    "Scalar::Util" => 0,
-    "Test::More" => "0.94",
-    "parent" => 0,
-    "perl" => "5.004"
+    "Test::More" => "0.88",
+    "parent" => 0
   },
   "configure_requires" => {
     "Module::Build" => "0.3601"
@@ -24,7 +23,7 @@ my %module_build_args = (
     "Jesse Stay <jesse\@staynalive.com>"
   ],
   "dist_name" => "Catalyst-Authentication-Credential-Twitter",
-  "dist_version" => "0.03001",
+  "dist_version" => "1.0.0",
   "license" => "perl",
   "module_name" => "Catalyst::Authentication::Credential::Twitter",
   "recommends" => {},

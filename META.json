@@ -4,7 +4,7 @@
       "Jesse Stay <jesse@staynalive.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300002, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -24,34 +24,38 @@
             "Module::Build" : "0.3601"
          }
       },
+      "develop" : {
+         "requires" : {
+            "version" : "0.9901"
+         }
+      },
       "runtime" : {
          "requires" : {
-            "Catalyst::Exception" : 0,
-            "Catalyst::Plugin::Session::PerUser" : 0,
-            "Class::Accessor::Fast" : 0,
-            "Data::Dumper" : 0,
-            "Net::Twitter" : 0,
-            "base" : 0,
-            "strict" : 0,
-            "warnings" : 0
+            "Catalyst::Exception" : "0",
+            "Catalyst::Plugin::Session::PerUser" : "0",
+            "Class::Accessor::Fast" : "0",
+            "Data::Dumper" : "0",
+            "Net::Twitter" : "0",
+            "base" : "0",
+            "strict" : "0",
+            "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "Carp" : 0,
-            "Catalyst" : 0,
-            "Catalyst::Controller" : 0,
-            "Scalar::Util" : 0,
-            "Test::More" : "0.94",
-            "parent" : 0,
-            "perl" : "5.004"
+            "Catalyst" : "0",
+            "Catalyst::Controller" : "0",
+            "File::Find" : "0",
+            "File::Temp" : "0",
+            "Test::More" : "0.88",
+            "parent" : "0"
          }
       }
    },
    "provides" : {
       "Catalyst::Authentication::Credential::Twitter" : {
          "file" : "lib/Catalyst/Authentication/Credential/Twitter.pm",
-         "version" : "0.03001"
+         "version" : "v1.0.0"
       }
    },
    "release_status" : "stable",
@@ -67,7 +71,10 @@
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter"
       }
    },
-   "version" : "0.03001",
+   "version" : "1.0.0",
+   "x_author_pledge" : {
+      "version" : 1
+   },
    "x_authority" : "cpan:JESSESTAY"
 }
 

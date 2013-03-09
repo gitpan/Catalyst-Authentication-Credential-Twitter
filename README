@@ -3,7 +3,7 @@ NAME
     for Catalyst
 
 VERSION
-    version 0.03001
+    version 1.0.0
 
 SYNOPSIS
     In MyApp.pm
@@ -111,7 +111,7 @@ METHODS
     the user's information given by Twitter (see "authenticate()" above for
     the lists of keys returned).
 
-  twitter_user()
+  twitter_user($c)
     Contains the user's twitter information after a successful twitter
     authentication via "authenticate_twitter()" or "authenticate()". Useful
     if, for example, you want to create users on-the-fly:
@@ -124,8 +124,8 @@ METHODS
 
             # properly authenticated against twitter,
             # user just doesn't exist yet
-            if ( !$user and  $twitter->twitter_user ) {
-                $user = $self->model->create_user( $twitter->twitter_user );
+            if ( !$user and  $twitter->twitter_user($c) ) {
+                $user = $self->model->create_user( $twitter->twitter_user($c) );
             }
 
             # etc
