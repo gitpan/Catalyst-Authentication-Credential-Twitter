@@ -1,10 +1,11 @@
 {
    "abstract" : "Twitter authentication for Catalyst",
    "author" : [
-      "Jesse Stay <jesse@staynalive.com>"
+      "Jesse Stay <jesse@staynalive.com>",
+      "Yanick Champoux <yanick@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -35,7 +36,7 @@
             "Catalyst::Plugin::Session::PerUser" : "0",
             "Class::Accessor::Fast" : "0",
             "Data::Dumper" : "0",
-            "Net::Twitter" : "0",
+            "Net::Twitter" : "4.00001",
             "base" : "0",
             "strict" : "0",
             "warnings" : "0"
@@ -55,7 +56,7 @@
    "provides" : {
       "Catalyst::Authentication::Credential::Twitter" : {
          "file" : "lib/Catalyst/Authentication/Credential/Twitter.pm",
-         "version" : "v1.0.0"
+         "version" : "v2.0.0"
       }
    },
    "release_status" : "stable",
@@ -71,10 +72,13 @@
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter"
       }
    },
-   "version" : "1.0.0",
+   "version" : "2.0.0",
    "x_author_pledge" : {
       "version" : 1
    },
-   "x_authority" : "cpan:JESSESTAY"
+   "x_authority" : "cpan:JESSESTAY",
+   "x_contributors" : [
+      "Jason McIntosh <jmac@appleseed-sc.com>"
+   ]
 }
 

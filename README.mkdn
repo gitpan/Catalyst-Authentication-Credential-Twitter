@@ -4,7 +4,7 @@ Catalyst::Authentication::Credential::Twitter - Twitter authentication for Catal
 
 # VERSION
 
-version 1.0.0
+version 2.0.0
 
 # SYNOPSIS
 
@@ -165,9 +165,10 @@ Please report bugs to [http://rt.cpan.org/Ticket/Create.html?Queue=Catalyst-Auth
 Thanks go out Daisuke Murase for writing C::P::A::Credential::Flickr,
 Marc Mims and Chris Thompson for Net::Twitter.
 
-# AUTHOR
+# AUTHORS
 
-Jesse Stay <jesse@staynalive.com>
+- Jesse Stay <jesse@staynalive.com>
+- Yanick Champoux <yanick@cpan.org> [![endorse](http://api.coderwall.com/yanick/endorsecount.png)](http://coderwall.com/yanick)
 
 # COPYRIGHT AND LICENSE
 

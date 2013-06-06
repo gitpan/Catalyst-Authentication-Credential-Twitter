@@ -20,10 +20,11 @@ my %module_build_args = (
   },
   "dist_abstract" => "Twitter authentication for Catalyst",
   "dist_author" => [
-    "Jesse Stay <jesse\@staynalive.com>"
+    "Jesse Stay <jesse\@staynalive.com>",
+    "Yanick Champoux <yanick\@cpan.org>"
   ],
   "dist_name" => "Catalyst-Authentication-Credential-Twitter",
-  "dist_version" => "1.0.0",
+  "dist_version" => "2.0.0",
   "license" => "perl",
   "module_name" => "Catalyst::Authentication::Credential::Twitter",
   "recommends" => {},
@@ -33,7 +34,7 @@ my %module_build_args = (
     "Catalyst::Plugin::Session::PerUser" => 0,
     "Class::Accessor::Fast" => 0,
     "Data::Dumper" => 0,
-    "Net::Twitter" => 0,
+    "Net::Twitter" => "4.00001",
     "base" => 0,
     "strict" => 0,
     "warnings" => 0

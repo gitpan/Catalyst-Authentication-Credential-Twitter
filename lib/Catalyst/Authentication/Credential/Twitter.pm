@@ -3,7 +3,7 @@ BEGIN {
   $Catalyst::Authentication::Credential::Twitter::AUTHORITY = 'cpan:JESSESTAY';
 }
 {
-  $Catalyst::Authentication::Credential::Twitter::VERSION = '1.0.0';
+  $Catalyst::Authentication::Credential::Twitter::VERSION = '2.0.0';
 }
 # ABSTRACT:  Twitter authentication for Catalyst
 
@@ -53,7 +53,7 @@ sub new {
 
     # Create a Net::Twitter instance
     $self->_twitter(Net::Twitter->new({ 
-		'traits'        	=> ['API::REST', 'OAuth'],
+		'traits'        	=> ['API::RESTv1_1', 'OAuth'],
 		'consumer_key' 		=> $self->consumer_key, 
         'consumer_secret'	=> $self->consumer_secret,
 	}));
@@ -176,7 +176,7 @@ Catalyst::Authentication::Credential::Twitter - Twitter authentication for Catal
 
 =head1 VERSION
 
-version 1.0.0
+version 2.0.0
 
 =head1 SYNOPSIS
 
@@ -341,9 +341,19 @@ Please report bugs to L<http://rt.cpan.org/Ticket/Create.html?Queue=Catalyst-Aut
 Thanks go out Daisuke Murase for writing C::P::A::Credential::Flickr,
 Marc Mims and Chris Thompson for Net::Twitter.
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Jesse Stay <jesse@staynalive.com>
+
+=item *
+
+Yanick Champoux <yanick@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

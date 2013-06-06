@@ -3,7 +3,7 @@ NAME
     for Catalyst
 
 VERSION
-    version 1.0.0
+    version 2.0.0
 
 SYNOPSIS
     In MyApp.pm
@@ -155,8 +155,10 @@ THANKS
     Thanks go out Daisuke Murase for writing C::P::A::Credential::Flickr,
     Marc Mims and Chris Thompson for Net::Twitter.
 
-AUTHOR
-    Jesse Stay <jesse@staynalive.com>
+AUTHORS
+    *   Jesse Stay <jesse@staynalive.com>
+
+    *   Yanick Champoux <yanick@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2009 by Jesse Stay.

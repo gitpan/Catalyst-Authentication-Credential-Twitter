@@ -1,14 +1,18 @@
 Revision history for Catalyst-Authentication-Credential-Twitter
 
+2.0.0 2013-06-06
+ [API CHANGES]
+ - Using the REST::APIv1_1 trait of Net::Twitter. 
+
+ [STATISTICS]
+ - code churn: 5 files changed, 9 insertions(+), 1 deletion(-)
+
 1.0.0 2013-03-09
  [API CHANGES]
  - twitter() now needs to be passed C<$c>.
 
  [BUG FIXES]
  - Session infos could get mixed up. (GH#2, reported by Jason McIntosh)
-
- [STATISTICS]
- - code churn: 6 files changed, 78 insertions(+), 31 deletions(-)
 
 0.03001 2011-11-22
  [BUG FIXES]
