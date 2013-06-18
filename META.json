@@ -56,7 +56,7 @@
    "provides" : {
       "Catalyst::Authentication::Credential::Twitter" : {
          "file" : "lib/Catalyst/Authentication/Credential/Twitter.pm",
-         "version" : "v2.0.0"
+         "version" : "v2.0.1"
       }
    },
    "release_status" : "stable",
@@ -72,7 +72,7 @@
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter"
       }
    },
-   "version" : "2.0.0",
+   "version" : "2.0.1",
    "x_author_pledge" : {
       "version" : 1
    },

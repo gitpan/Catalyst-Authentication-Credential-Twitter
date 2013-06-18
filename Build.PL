@@ -24,7 +24,7 @@ my %module_build_args = (
     "Yanick Champoux <yanick\@cpan.org>"
   ],
   "dist_name" => "Catalyst-Authentication-Credential-Twitter",
-  "dist_version" => "2.0.0",
+  "dist_version" => "2.0.1",
   "license" => "perl",
   "module_name" => "Catalyst::Authentication::Credential::Twitter",
   "recommends" => {},
