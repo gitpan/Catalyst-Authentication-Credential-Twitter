@@ -56,23 +56,23 @@
    "provides" : {
       "Catalyst::Authentication::Credential::Twitter" : {
          "file" : "lib/Catalyst/Authentication/Credential/Twitter.pm",
-         "version" : "v2.0.1"
+         "version" : "v2.0.2"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "mailto" : "bug-catalyst-authentication-credential-twitter at rt.cpan.org",
-         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Catalyst-Authentication-Credential-Twitter"
+         "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter/issues"
       },
       "homepage" : "http://search.cpan.org/dist/Catalyst-Authentication-Credential-Twitter/",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter.git",
+         "url" : "git://github.com/yanick/Catalyst-Authentication-Credential-Twitter.git",
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter"
       }
    },
-   "version" : "2.0.1",
+   "version" : "2.0.2",
    "x_author_pledge" : {
       "version" : 1
    },

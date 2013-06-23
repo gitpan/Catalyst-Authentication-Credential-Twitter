@@ -3,7 +3,7 @@ NAME
     for Catalyst
 
 VERSION
-    version 2.0.1
+    version 2.0.2
 
 SYNOPSIS
     In MyApp.pm
@@ -109,7 +109,7 @@ METHODS
   authenticate_twitter( )
     Only performs the twitter authentication. Returns a hashref containing
     the user's information given by Twitter (see "authenticate()" above for
-    the lists of keys returned).
+    the lists of keys returned), or undef if the authentication failed.
 
   twitter_user($c)
     Contains the user's twitter information after a successful twitter
