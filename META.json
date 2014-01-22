@@ -5,7 +5,7 @@
       "Yanick Champoux <yanick@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -46,17 +46,20 @@
          "requires" : {
             "Catalyst" : "0",
             "Catalyst::Controller" : "0",
-            "File::Find" : "0",
-            "File::Temp" : "0",
+            "File::Spec" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "Test::More" : "0.88",
-            "parent" : "0"
+            "lib" : "0",
+            "parent" : "0",
+            "perl" : "5.006"
          }
       }
    },
    "provides" : {
       "Catalyst::Authentication::Credential::Twitter" : {
          "file" : "lib/Catalyst/Authentication/Credential/Twitter.pm",
-         "version" : "v2.0.2"
+         "version" : "v2.0.3"
       }
    },
    "release_status" : "stable",
@@ -72,13 +75,14 @@
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter"
       }
    },
-   "version" : "2.0.2",
+   "version" : "2.0.3",
    "x_author_pledge" : {
       "version" : 1
    },
    "x_authority" : "cpan:JESSESTAY",
    "x_contributors" : [
-      "Jason McIntosh <jmac@appleseed-sc.com>"
+      "Jason McIntosh <jmac@appleseed-sc.com>",
+      "Karen Etheridge <ether@cpan.org>"
    ]
 }
 

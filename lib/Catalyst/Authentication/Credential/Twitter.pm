@@ -2,11 +2,8 @@ package Catalyst::Authentication::Credential::Twitter;
 BEGIN {
   $Catalyst::Authentication::Credential::Twitter::AUTHORITY = 'cpan:JESSESTAY';
 }
-{
-  $Catalyst::Authentication::Credential::Twitter::VERSION = '2.0.2';
-}
 # ABSTRACT:  Twitter authentication for Catalyst
-
+$Catalyst::Authentication::Credential::Twitter::VERSION = '2.0.3';
 use strict;
 use warnings;
 use base qw( Class::Accessor::Fast );
@@ -56,6 +53,7 @@ sub new {
 		'traits'        	=> ['API::RESTv1_1', 'OAuth'],
 		'consumer_key' 		=> $self->consumer_key, 
         'consumer_secret'	=> $self->consumer_secret,
+		'ssl'				=> 1,
 	}));
 
     return $self;
@@ -80,6 +78,7 @@ sub authenticate_twitter {
 		'traits'        	=> ['API::RESTv1_1', 'OAuth'],
 		'consumer_key' 		=> $self->consumer_key,
         'consumer_secret'	=> $self->consumer_secret,
+		'ssl'				=> 1,
 	}));
 
 	if (!$access_token && !$access_token_secret) {
@@ -156,6 +155,7 @@ sub authenticate_twitter_url {
 		'traits'        	=> ['API::RESTv1_1', 'OAuth'],
 		'consumer_key' 		=> $self->consumer_key,
         'consumer_secret'	=> $self->consumer_secret,
+		'ssl'				=> 1,
 	));
 
     my $uri = $self->_twitter->get_authentication_url( 'callback'	=> $c->config->{'twitter_callback_url'} || $self->callback_url );
@@ -179,7 +179,7 @@ Catalyst::Authentication::Credential::Twitter - Twitter authentication for Catal
 
 =head1 VERSION
 
-version 2.0.2
+version 2.0.3
 
 =head1 SYNOPSIS
 
