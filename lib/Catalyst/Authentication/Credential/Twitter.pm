@@ -3,7 +3,7 @@ BEGIN {
   $Catalyst::Authentication::Credential::Twitter::AUTHORITY = 'cpan:JESSESTAY';
 }
 # ABSTRACT:  Twitter authentication for Catalyst
-$Catalyst::Authentication::Credential::Twitter::VERSION = '2.0.3';
+$Catalyst::Authentication::Credential::Twitter::VERSION = '2.0.4';
 use strict;
 use warnings;
 use base qw( Class::Accessor::Fast );
@@ -173,13 +173,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Catalyst::Authentication::Credential::Twitter - Twitter authentication for Catalyst
 
 =head1 VERSION
 
-version 2.0.3
+version 2.0.4
 
 =head1 SYNOPSIS
 

@@ -5,7 +5,7 @@
       "Yanick Champoux <yanick@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -46,6 +46,7 @@
          "requires" : {
             "Catalyst" : "0",
             "Catalyst::Controller" : "0",
+            "Catalyst::Plugin::Session::Store::FastMmap" : "0",
             "File::Spec" : "0",
             "IO::Handle" : "0",
             "IPC::Open3" : "0",
@@ -59,23 +60,22 @@
    "provides" : {
       "Catalyst::Authentication::Credential::Twitter" : {
          "file" : "lib/Catalyst/Authentication/Credential/Twitter.pm",
-         "version" : "v2.0.3"
+         "version" : "v2.0.4"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "bug-catalyst-authentication-credential-twitter at rt.cpan.org",
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter/issues"
       },
       "homepage" : "http://search.cpan.org/dist/Catalyst-Authentication-Credential-Twitter/",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/yanick/Catalyst-Authentication-Credential-Twitter.git",
+         "url" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter.git",
          "web" : "https://github.com/yanick/Catalyst-Authentication-Credential-Twitter"
       }
    },
-   "version" : "2.0.3",
+   "version" : "2.0.4",
    "x_author_pledge" : {
       "version" : 1
    },

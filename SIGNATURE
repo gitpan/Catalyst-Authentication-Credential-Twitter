@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,19 +15,19 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 10b8bcbe03d0cf6855794443dadcf339c68d6ad7 AUTHOR_PLEDGE
-SHA1 cec8e04abf4b29cfb8676eb2bee4c30ed6a86576 Build.PL
+SHA1 bcd9717bc0ed7682ccb5bc05334ee9cf6d0cd152 Build.PL
 SHA1 911fadcaae252e4d99cadfe8d58088774752f922 CONTRIBUTORS
-SHA1 972a0084a3a33e13e19fa0bb1a1c10fee30d5394 Changes
+SHA1 4364eda2aa61264f3e9f2bc0a68902692369df00 Changes
 SHA1 334c033951ccf720e409dddbc135a8aac05c9c14 INSTALL
-SHA1 c25d00ba85ab751f89ecf1f41f60e43e18014316 LICENSE
+SHA1 8ac7c0ccac45b0468f74e24504f6ee1cc80433e1 LICENSE
 SHA1 95f1e4d67e1acfb7e45f5b9fa9e19068f229783f MANIFEST
-SHA1 d584f953e6aeaebd10d8a3a1606dcae354548393 META.json
-SHA1 ec5ec321a9603abe47792775a7b7aa895c9a690e META.yml
-SHA1 0a17c092728cebdcb5adc974e1152b4d4f967c37 README
-SHA1 81a0f5b84b32e9e1356c377a4dc1581ec69b11ed README.mkdn
-SHA1 6d059f88aa99ea7eff640e6695cc4a2fa171b1b7 lib/Catalyst/Authentication/Credential/Twitter.pm
+SHA1 15929a3ec4ab994975cb821728a79050065e8e83 META.json
+SHA1 2f60041ea48c3d3f86f979778739b1ee402b0ec0 META.yml
+SHA1 7fada27288a42b5315a285b2dcf86c1198f8ac56 README
+SHA1 b2479b34e2bba69aee5305bbc1d2a41ca44016d4 README.mkdn
+SHA1 217d674f5049f770dc43920b50d6c67265fe4f88 lib/Catalyst/Authentication/Credential/Twitter.pm
 SHA1 6fc7f7d06c43f69d5f580f47b8463a209e05cdad t/00-compile.t
-SHA1 4a512f4b01fcb9b858b684d145c3e132b1092cad t/000-report-versions-tiny.t
+SHA1 7fe6c8e4884310b7b726f3ed48584991af0a6b8d t/000-report-versions-tiny.t
 SHA1 39becf9564fd91fa0674530f8c1c248a29b86015 t/02pod.t
 SHA1 e923679a1bbd8eb8f727e46f5906af25de27ec97 t/03podcoverage.t.disabled
 SHA1 f50a5b33841b3f5184e4b012b506e96b2dc64e29 t/basic_app.t
@@ -41,7 +41,7 @@ SHA1 ec3f84bfd7a9ce3246e7592f4134100c6b5ce02b xt/release/unused-vars.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.14 (GNU/Linux)
 
-iEYEARECAAYFAlLfN98ACgkQ34Hwf+GwC4xZGQCdHhHr/FrZNliDrwnruCOahHOV
-F2kAoKeNRRDBF6rj8y5LLhlYSA4hGjmN
-=NCOk
+iEYEARECAAYFAlMfregACgkQ34Hwf+GwC4yocgCfT3tVWVczv75geH540RVksolF
+/VwAn24IK/gpp9EWb5PvJIGMqNSl8GHS
+=hlGl
 -----END PGP SIGNATURE-----
